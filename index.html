@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="static/index.js"></script>
-    <link rel="stylesheet" href="static/styles.css">
-</head>
-<body>
-    <textarea id="in"></textarea>
-    <button onclick="polymerase()">Polymerase!</button>
-
-
-
-    <script>
+    <script defer>
         const codonTableRNA = {
             "START": ["AUG"], // also codes for methionine
             "STOP": ["UAG", "UAA", "UGA"], // mutations also included for stoppage
-            "Phenylalanine": ["UUU", "UUC"],
+            "Phenylalanine": ["UUU", "UUC"], // print // phenylalanine
             "Leucine": ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"],
             "Serine": ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"],
             "Tyrosine": ["UAU", "UAC"],
@@ -41,10 +32,21 @@
             "Termination-am": ["UAG"], // mutation amber
             "Termination-op-um": ["UGA"] // mutation opal/umber
         };
+    const transcriptionTable = { "A": "U", "C": "G" }
+    const replicationTable = {"A": "T", "C": "G"}
 
-        const transcriptionTable = { "A": "U", "C": "G" }
-        const replicationTable = {"A": "T", "C": "G"}
+    function polymerase(){
+        let a = document.getElementById("in").value
+        alert(a)
+
+
+    }
 
     </script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <textarea id="in"></textarea>
+    <button onclick="polymerase()">Polymerase!</button>
 </body>
 </html>
