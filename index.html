@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>doctor type</title>
-        <link rel="stylesheet" href="static/styles.css">
-        <script src="static/index.js">alert("hi")</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="in"></textarea>
+    <button onclick="polymerase()">Polymerase!</button>
 
-    </head>
-    <body>
-        
-    </body>
+
+
+    <script>
+        const codonTableRNA = {
+            "START": ["AUG"], // also codes for methionine
+            "STOP": ["UAG", "UAA", "UGA"], // mutations also included for stoppage
+            "Phenylalanine": ["UUU", "UUC"],
+            "Leucine": ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"],
+            "Serine": ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"],
+            "Tyrosine": ["UAU", "UAC"],
+            "Cysteine": ["UGU", "UGC"],
+            "Tryptophan": ["UGG"],
+            "Proline": ["CCU", "CCC", "CCA", "CCG"],
+            "Histidine": ["CAU", "CAC"],
+            "Glutamine": ["CAA", "CAG"],
+            "Arginine": ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"],
+            "Isoleucine": ["AUU", "AUC", "AUA"],
+            "Methionine": ["AUG"],
+            "Threonine": ["ACU", "ACC", "ACA", "ACG"],
+            "Asparagine": ["AAU", "AAC"],
+            "Lysine": ["AAA", "AAG"],
+            "Valine": ["GUU", "GUC", "GUA", "GUG"],
+            "Alanine": ["GCU", "GCC", "GCA", "GCG"],
+            "Aspartate": ["GAU", "GAC"],
+            "Glutamate": ["GAA", "GAG"],
+            "Glycine": ["GGU", "GGC", "GGA", "GGG"],
+            "Termination-oc": ["UAA"], // mutation ochre
+            "Termination-am": ["UAG"], // mutation amber
+            "Termination-op-um": ["UGA"] // mutation opal/umber
+        };
+
+        const transcriptionTable = { "A": "U", "C": "G" }
+        const replicationTable = {"A": "T", "C": "G"}
+
+    </script>
+</body>
 </html>
