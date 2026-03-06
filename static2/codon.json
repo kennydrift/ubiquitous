@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer>
-        const codonTableRNA = {
-        "AUG": "START", // also Methionine
+{
+        "AUG": "START",
         "UAG": "STOP",
         "UAA": "STOP",
         "UGA": "STOP",
@@ -90,35 +83,3 @@
         "GGA": "Glycine",
         "GGG": "Glycine"
     }
-    const transcriptionTable = 
-    { 
-        "A": "U",
-        "C": "G"
-    }
-    const replicationTable = 
-    {   "A": "T", 
-        "C": "G"
-    }
-
-    function tRNA(){
-        let a = document.getElementById("in").value
-        alert(codonTableRNA[a])
-
-
-    }
-
-    function polymerase(){
-        let codon = document.getElementById("in").value
-        alert(transcriptionTable[codon])
-
-    }
-
-    </script>
-    <link rel="stylesheet" href="static/styles.css">
-</head>
-<body>
-    <textarea id="in"></textarea>
-    <button onclick="polymerase()">Polymerase!</button>
-    <button onclick="tRNA()">tRNA!</button>
-</body>
-</html>
