@@ -113,13 +113,18 @@
 
 
     }
-
     function polymerase(){
+        let baseArray = []
         let codon = document.getElementById("in").value
         let b = document.getElementById("transcript")
-        b.innerHTML = transcriptionTable[codon]
+        let bases = codon.split('');
 
-
+        
+        for (let i=0; i < bases.length; i++){
+            baseArray.push(transcriptionTable[bases[i]])
+            
+        }
+        b.innerHTML = baseArray
     }
 
     </script>
