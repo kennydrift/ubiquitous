@@ -92,12 +92,19 @@
     }
     const transcriptionTable = 
     { 
+        // Transcribes
         "A": "U",
-        "C": "G"
+        "C": "G",
+        "U": "A",
+        "G": "C",
     }
     const replicationTable = 
-    {   "A": "T", 
-        "C": "G"
+    {   
+        // Replicates DNA to make more DNA
+        "A": "T", 
+        "C": "G",
+        "T": "A",
+        "A": "T"
     }
 
     function tRNA(){
@@ -109,16 +116,20 @@
 
     function polymerase(){
         let codon = document.getElementById("in").value
-        alert(transcriptionTable[codon])
+        let b = document.getElementById("transcript")
+        b.innerHTML = transcriptionTable[codon]
+
 
     }
 
     </script>
-    <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
     <textarea id="in"></textarea>
     <button onclick="polymerase()">Polymerase!</button>
     <button onclick="tRNA()">tRNA!</button>
+    <p id="transcript">Transcription goes here</p>
+    
+    
 </body>
 </html>
