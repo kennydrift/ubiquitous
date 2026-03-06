@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <script defer>
         const codonTableRNA = {
         "AUG": "START", // also Methionine
@@ -121,8 +122,9 @@
 
         
         for (let i=0; i < bases.length; i++){
-            baseArray.push(transcriptionTable[bases[i]])
-            
+            if(bases[i] !== " "){
+                baseArray.push(transcriptionTable[bases[i]])
+            }
         }
         b.innerHTML = baseArray
     }
